@@ -4,36 +4,50 @@
       <stop offset="0%" style="stop-color:#4CAF50"/>
       <stop offset="100%" style="stop-color:#81C784"/>
     </linearGradient>
+    <linearGradient id="header" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E7D32"/>
+      <stop offset="100%" style="stop-color:#1B5E20"/>
+    </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="800" height="600" fill="url(#bg)"/>
 
   <!-- Header -->
-  <rect x="0" y="0" width="800" height="120" fill="#2E7D32"/>
-  <text x="400" y="50" text-anchor="middle" fill="white" font-size="32" font-weight="bold" font-family="Arial">Smart Soil Moisture Probe</text>
-  <text x="400" y="90" text-anchor="middle" fill="#C8E6C9" font-size="24" font-family="Arial"></text>
+  <rect x="0" y="0" width="800" height="100" fill="url(#header)"/>
+  <text x="400" y="45" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial">Smart Soil Moisture Probe</text>
+  <text x="400" y="80" text-anchor="middle" fill="#C8E6C9" font-size="20" font-family="Arial">स्मार्ट मिट्टी नमी जांच</text>
 
-  <!-- Description Box -->
-  <rect x="50" y="140" width="700" height="80" rx="10" fill="white" opacity="0.9"/>
-  <text x="400" y="190" text-anchor="middle" fill="#333" font-size="18" font-family="Arial">A handheld probe that measures soil moisture levels at vario...</text>
+  <!-- Main Content Area -->
+  <rect x="30" y="120" width="740" height="420" rx="15" fill="white" opacity="0.95"/>
 
-  <!-- Problem Section -->
-  <rect x="50" y="240" width="340" height="150" rx="10" fill="#FFF3E0"/>
-  <text x="220" y="275" text-anchor="middle" fill="#E65100" font-size="20" font-weight="bold" font-family="Arial">Problem / समस्या</text>
-  <text x="220" y="310" text-anchor="middle" fill="#333" font-size="14" font-family="Arial"></text>
+  <!-- Description -->
+  <text x="400" y="160" text-anchor="middle" fill="#333" font-size="16" font-family="Arial">Measure soil moisture levels and get irrigation recommendations...</text>
+
+  <!-- Farmer Icon -->
+  <circle cx="200" cy="280" r="60" fill="#FFF3E0"/>
+  <text x="200" y="295" text-anchor="middle" font-size="50">👨‍🌾</text>
+  <text x="200" y="360" text-anchor="middle" fill="#666" font-size="14" font-family="Arial">For Farmers</text>
+
+  <!-- Phone Icon -->
+  <circle cx="400" cy="280" r="60" fill="#E3F2FD"/>
+  <text x="400" y="295" text-anchor="middle" font-size="50">📱</text>
+  <text x="400" y="360" text-anchor="middle" fill="#666" font-size="14" font-family="Arial">On Your Phone</text>
+
+  <!-- AI Icon -->
+  <circle cx="600" cy="280" r="60" fill="#F3E5F5"/>
+  <text x="600" y="295" text-anchor="middle" font-size="50">🤖</text>
+  <text x="600" y="360" text-anchor="middle" fill="#666" font-size="14" font-family="Arial">AI Powered</text>
 
   <!-- Features Section -->
-  <rect x="410" y="240" width="340" height="150" rx="10" fill="#E3F2FD"/>
-  <text x="580" y="275" text-anchor="middle" fill="#1565C0" font-size="20" font-weight="bold" font-family="Arial">Features / विशेषताएं</text>
-  
+  <rect x="50" y="400" width="700" height="120" rx="10" fill="#E8F5E9"/>
+  <text x="400" y="430" text-anchor="middle" fill="#2E7D32" font-size="18" font-weight="bold" font-family="Arial">Key Features / मुख्य विशेषताएं</text>
+
+  <text x="150" y="470" text-anchor="middle" fill="#333" font-size="14" font-family="Arial">✓ Real-time moisture readin</text>
+  <text x="400" y="470" text-anchor="middle" fill="#333" font-size="14" font-family="Arial">✓ Color-coded field maps</text>
+  <text x="650" y="470" text-anchor="middle" fill="#333" font-size="14" font-family="Arial">✓ Irrigation scheduling</text>
 
   <!-- Footer -->
   <rect x="0" y="550" width="800" height="50" fill="#1B5E20"/>
-  <text x="400" y="580" text-anchor="middle" fill="white" font-size="18" font-family="Arial">FarmTech UP - Empowering Farmers with Technology</text>
-
-  <!-- Phone Icon -->
-  <rect x="680" y="420" width="70" height="120" rx="8" fill="#333"/>
-  <rect x="685" y="430" width="60" height="95" rx="2" fill="#4CAF50"/>
-  <circle cx="715" cy="535" r="8" fill="#666"/>
+  <text x="400" y="580" text-anchor="middle" fill="white" font-size="16" font-family="Arial">🌾 FarmTech UP - Empowering Farmers with Technology</text>
 </svg>

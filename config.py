@@ -22,6 +22,7 @@ TOOLS_DIR.mkdir(exist_ok=True)
 
 # API Keys
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # GitHub Configuration
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")

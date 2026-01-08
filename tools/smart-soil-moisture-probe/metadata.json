@@ -1,0 +1,16 @@
+{
+  "name": "Smart Soil Moisture Probe",
+  "name_hindi": "",
+  "short_description": "A handheld probe that measures soil moisture levels at various depths and provides instant recommendations for irrigation timing and water volume based on crop type and growth stage.",
+  "pain_point": "",
+  "opportunity": "",
+  "target_users": "Farmers in UP",
+  "ai_features": [],
+  "key_features": [],
+  "technical_approach": "",
+  "id": "tool_002",
+  "created_at": "2026-01-09T02:10:58.795008",
+  "status": "built",
+  "built_at": "2026-01-09T02:41:02.754062",
+  "slug": "smart-soil-moisture-probe"
+}

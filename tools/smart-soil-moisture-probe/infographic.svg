@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50"/>
+      <stop offset="100%" style="stop-color:#81C784"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="120" fill="#2E7D32"/>
+  <text x="400" y="50" text-anchor="middle" fill="white" font-size="32" font-weight="bold" font-family="Arial">Smart Soil Moisture Probe</text>
+  <text x="400" y="90" text-anchor="middle" fill="#C8E6C9" font-size="24" font-family="Arial"></text>
+
+  <!-- Description Box -->
+  <rect x="50" y="140" width="700" height="80" rx="10" fill="white" opacity="0.9"/>
+  <text x="400" y="190" text-anchor="middle" fill="#333" font-size="18" font-family="Arial">A handheld probe that measures soil moisture levels at vario...</text>
+
+  <!-- Problem Section -->
+  <rect x="50" y="240" width="340" height="150" rx="10" fill="#FFF3E0"/>
+  <text x="220" y="275" text-anchor="middle" fill="#E65100" font-size="20" font-weight="bold" font-family="Arial">Problem / समस्या</text>
+  <text x="220" y="310" text-anchor="middle" fill="#333" font-size="14" font-family="Arial"></text>
+
+  <!-- Features Section -->
+  <rect x="410" y="240" width="340" height="150" rx="10" fill="#E3F2FD"/>
+  <text x="580" y="275" text-anchor="middle" fill="#1565C0" font-size="20" font-weight="bold" font-family="Arial">Features / विशेषताएं</text>
+  
+
+  <!-- Footer -->
+  <rect x="0" y="550" width="800" height="50" fill="#1B5E20"/>
+  <text x="400" y="580" text-anchor="middle" fill="white" font-size="18" font-family="Arial">FarmTech UP - Empowering Farmers with Technology</text>
+
+  <!-- Phone Icon -->
+  <rect x="680" y="420" width="70" height="120" rx="8" fill="#333"/>
+  <rect x="685" y="430" width="60" height="95" rx="2" fill="#4CAF50"/>
+  <circle cx="715" cy="535" r="8" fill="#666"/>
+</svg>

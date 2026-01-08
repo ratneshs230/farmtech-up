@@ -1,0 +1,73 @@
+name: FarmTech UP Pipeline
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Pipeline mode'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - idea-only
+          - showcase
+
+  # Scheduled run (weekly on Sunday at 10:00 AM IST / 4:30 AM UTC)
+  schedule:
+    - cron: '30 4 * * 0'
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          cd Pipeline
+          pip install -r requirements.txt
+
+      - name: Install Claude Code CLI
+        run: |
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Run Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd Pipeline
+          if [ "${{ github.event.inputs.mode }}" == "idea-only" ]; then
+            python orchestrator.py --idea-only
+          elif [ "${{ github.event.inputs.mode }}" == "showcase" ]; then
+            python orchestrator.py --showcase
+          else
+            python orchestrator.py --no-git
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "FarmTech UP Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "🌾 Auto-generated tool by FarmTech UP Pipeline"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: success()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Pipeline/showcase
+          publish_branch: gh-pages

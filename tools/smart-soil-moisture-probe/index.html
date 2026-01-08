@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Soil Moisture Probe | स्मार्ट मिट्टी नमी जांच</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Smart Soil Moisture Probe</h1>
+            <p class="subtitle">स्मार्ट मिट्टी नमी जांच</p>
+        </header>
+
+        <main>
+            <!-- Current Moisture Display -->
+            <section class="moisture-display">
+                <div class="moisture-circle">
+                    <span class="moisture-value" id="currentMoisture">--</span>
+                    <span class="moisture-unit">%</span>
+                </div>
+                <p class="moisture-label">Current Moisture / वर्तमान नमी</p>
+                <p class="moisture-status" id="moistureStatus">No readings yet / अभी तक कोई रीडिंग नहीं</p>
+            </section>
+
+            <!-- Input Section -->
+            <section class="input-section">
+                <label for="moistureInput">📝 Enter Reading / रीडिंग दर्ज करें</label>
+                <div class="input-group">
+                    <input type="number" id="moistureInput" min="0" max="100" placeholder="0-100">
+                    <button id="addReading" class="btn-primary">➕ Add / जोड़ें</button>
+                </div>
+            </section>
+
+            <!-- Statistics -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-icon">📊</span>
+                    <span class="stat-value" id="avgMoisture">--</span>
+                    <span class="stat-label">Average / औसत</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📈</span>
+                    <span class="stat-value" id="maxMoisture">--</span>
+                    <span class="stat-label">Max / अधिकतम</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📉</span>
+                    <span class="stat-value" id="minMoisture">--</span>
+                    <span class="stat-label">Min / न्यूनतम</span>
+                </div>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="chart-section">
+                <h2>📈 Moisture History / नमी इतिहास</h2>
+                <div class="chart-container">
+                    <canvas id="moistureChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Readings List -->
+            <section class="readings-section">
+                <h2>📋 Recent Readings / हाल की रीडिंग</h2>
+                <ul id="readingsList" class="readings-list">
+                    <li class="no-readings">No readings yet / अभी तक कोई रीडिंग नहीं</li>
+                </ul>
+                <button id="clearAll" class="btn-danger">🗑️ Clear All / सब हटाएं</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 Happy Farming! / खुशहाल खेती! 🌾</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

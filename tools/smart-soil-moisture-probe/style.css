@@ -1,0 +1,340 @@
+/* Smart Soil Moisture Probe - Mobile-First Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #2e7d32;
+    --light-green: #4caf50;
+    --dark-green: #1b5e20;
+    --earth-brown: #5d4037;
+    --light-brown: #8d6e63;
+    --cream: #f5f5dc;
+    --white: #ffffff;
+    --danger: #c62828;
+    --warning: #f57c00;
+    --success: #388e3c;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, var(--cream) 0%, #e8f5e9 100%);
+    min-height: 100vh;
+    color: var(--earth-brown);
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid var(--light-green);
+    margin-bottom: 24px;
+}
+
+header h1 {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: var(--light-brown);
+    font-size: 1rem;
+}
+
+/* Moisture Display Circle */
+.moisture-display {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.moisture-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, var(--primary-green), var(--dark-green));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.3);
+    border: 4px solid var(--light-green);
+}
+
+.moisture-value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--white);
+    line-height: 1;
+}
+
+.moisture-unit {
+    font-size: 1.5rem;
+    color: var(--cream);
+}
+
+.moisture-label {
+    font-size: 1rem;
+    color: var(--earth-brown);
+    margin-bottom: 8px;
+}
+
+.moisture-status {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.status-dry {
+    background-color: #ffebee;
+    color: var(--danger);
+}
+
+.status-low {
+    background-color: #fff3e0;
+    color: var(--warning);
+}
+
+.status-good {
+    background-color: #e8f5e9;
+    color: var(--success);
+}
+
+.status-wet {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Input Section */
+.input-section {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.input-section label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--primary-green);
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 16px;
+    font-size: 1.2rem;
+    border: 2px solid var(--light-green);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-green);
+}
+
+.btn-primary {
+    background: linear-gradient(145deg, var(--light-green), var(--primary-green));
+    color: var(--white);
+    border: none;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 120px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Statistics */
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 16px 8px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-green);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--light-brown);
+}
+
+/* Chart Section */
+.chart-section {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chart-section h2 {
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    margin-bottom: 16px;
+}
+
+.chart-container {
+    position: relative;
+    height: 200px;
+    background: #f9fbe7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#moistureChart {
+    width: 100%;
+    height: 100%;
+}
+
+/* Readings List */
+.readings-section {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.readings-section h2 {
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    margin-bottom: 16px;
+}
+
+.readings-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.readings-list li {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.readings-list li:last-child {
+    border-bottom: none;
+}
+
+.no-readings {
+    text-align: center;
+    color: var(--light-brown);
+    font-style: italic;
+}
+
+.reading-value {
+    font-weight: 600;
+    color: var(--primary-green);
+    font-size: 1.1rem;
+}
+
+.reading-time {
+    font-size: 0.85rem;
+    color: var(--light-brown);
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: var(--white);
+    border: none;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-danger:hover {
+    background: #b71c1c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--light-brown);
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 480px) {
+    .container {
+        padding: 24px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .moisture-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .moisture-value {
+        font-size: 4rem;
+    }
+}

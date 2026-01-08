@@ -79,7 +79,26 @@
       "id": "tool_004",
       "created_at": "2026-01-09T03:47:26.647111",
       "status": "pending"
+    },
+    {
+      "name": "CropWatch AI",
+      "name_hindi": "",
+      "short_description": "An intelligent crop monitoring dashboard that uses drone imagery and satellite data to detect early signs of pest infestations, disease outbreaks, and nutrient deficiencies across fields. Farmers receive real-time alerts with GPS coordinates of problem areas and AI-generated treatment recommendations.",
+      "pain_point": "",
+      "opportunity": "",
+      "target_users": "Row crop farmers managing 100+ acres who want to reduce crop losses and optimize input costs",
+      "ai_features": [],
+      "key_features": [
+        "Automated aerial field scanning with disease detection",
+        "Historical yield prediction based on current crop health",
+        "Integration with weather forecasts for spray timing optimization",
+        "Offline mobile app for field scouting with photo diagnosis"
+      ],
+      "technical_approach": "",
+      "id": "tool_005",
+      "created_at": "2026-01-09T04:51:34.402581",
+      "status": "pending"
     }
   ],
-  "last_updated": "2026-01-09T03:47:26.647129"
+  "last_updated": "2026-01-09T04:51:34.403066"
 }

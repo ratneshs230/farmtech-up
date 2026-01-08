@@ -1,73 +1,129 @@
 name: FarmTech UP Pipeline
 
 on:
-  # Manual trigger
+  # Run every 6 hours
+  schedule:
+    - cron: '0 */6 * * *'
+
+  # Allow manual trigger
   workflow_dispatch:
     inputs:
       mode:
         description: 'Pipeline mode'
-        required: true
+        required: false
         default: 'full'
         type: choice
         options:
           - full
           - idea-only
-          - showcase
-
-  # Scheduled run (weekly on Sunday at 10:00 AM IST / 4:30 AM UTC)
-  schedule:
-    - cron: '30 4 * * 0'
+          - build-pending
+          - showcase-only
 
 jobs:
   run-pipeline:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
-          cd Pipeline
+          pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Set up Node.js (for Claude Code CLI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Install Claude Code CLI
         run: |
           npm install -g @anthropic-ai/claude-code
+          claude --version
+
+      - name: Create .env file
+        run: |
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> .env
+          echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" >> .env
 
       - name: Run Pipeline
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          cd Pipeline
-          if [ "${{ github.event.inputs.mode }}" == "idea-only" ]; then
-            python orchestrator.py --idea-only
-          elif [ "${{ github.event.inputs.mode }}" == "showcase" ]; then
-            python orchestrator.py --showcase
-          else
-            python orchestrator.py --no-git
-          fi
+          MODE="${{ github.event.inputs.mode || 'full' }}"
+
+          case $MODE in
+            "idea-only")
+              python orchestrator.py --idea-only --no-git
+              ;;
+            "build-pending")
+              python orchestrator.py --build --no-git
+              ;;
+            "showcase-only")
+              python orchestrator.py --showcase --no-git
+              ;;
+            *)
+              python orchestrator.py --no-git
+              ;;
+          esac
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "FarmTech UP Bot"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add -A
-          git diff --staged --quiet || git commit -m "🌾 Auto-generated tool by FarmTech UP Pipeline"
+
+          # Get the name of the latest tool if any new tool was created
+          TOOL_NAME=$(git diff --cached --name-only | grep 'tools/.*/index.html' | head -1 | sed 's|tools/||' | sed 's|/index.html||')
+
+          if [ -n "$TOOL_NAME" ]; then
+            git commit -m "Auto-generated tool: $TOOL_NAME
+
+Built by FarmTech UP automated pipeline
+
+Co-Authored-By: Claude Code <noreply@anthropic.com>"
+          else
+            git commit -m "Pipeline update: $(date +'%Y-%m-%d %H:%M')
+
+Co-Authored-By: Claude Code <noreply@anthropic.com>"
+          fi
+
           git push
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        if: success()
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Pipeline/showcase
-          publish_branch: gh-pages
+      - name: Summary
+        run: |
+          echo "## Pipeline Run Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Mode:** ${{ github.event.inputs.mode || 'full' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Time:** $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # List tools
+          echo "### Current Tools" >> $GITHUB_STEP_SUMMARY
+          for dir in tools/*/; do
+            if [ -f "${dir}metadata.json" ]; then
+              TOOL_NAME=$(python -c "import json; print(json.load(open('${dir}metadata.json'))['name'])" 2>/dev/null || echo "Unknown")
+              echo "- $TOOL_NAME" >> $GITHUB_STEP_SUMMARY
+            fi
+          done

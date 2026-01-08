@@ -2,21 +2,38 @@
   "tools": [
     {
       "name": "Smart Soil Moisture Probe",
-      "name_hindi": "",
+      "name_hindi": "स्मार्ट मिट्टी नमी जांच",
       "short_description": "A handheld probe that measures soil moisture levels at various depths and provides instant recommendations for irrigation timing and water volume based on crop type and growth stage.",
-      "pain_point": "",
-      "opportunity": "",
+      "pain_point": "Farmers struggle to know optimal irrigation timing",
+      "opportunity": "Proper moisture management can increase yields by 20%",
       "target_users": "Farmers in UP",
       "ai_features": [],
-      "key_features": [],
+      "key_features": ["GPS-tagged moisture readings", "Color-coded field visualization", "Historical moisture trend tracking"],
       "technical_approach": "",
       "id": "tool_002",
       "created_at": "2026-01-09T02:10:58.795008",
-      "status": "pending",
+      "status": "built",
       "slug": "smart-soil-moisture-probe",
       "published_at": "2026-01-09T02:41:02.755229",
       "url": "tools/smart-soil-moisture-probe/index.html"
+    },
+    {
+      "name": "SoilSense Pro",
+      "name_hindi": "मिट्टी परीक्षक प्रो",
+      "short_description": "A handheld device that instantly analyzes soil composition, pH levels, moisture content, and nutrient deficiencies by inserting a probe into the ground.",
+      "pain_point": "Farmers often don't know the exact nutrient levels in their soil",
+      "opportunity": "Precise soil analysis can optimize fertilizer use, saving costs and improving yields",
+      "target_users": "Small to medium-scale farmers, organic growers, and agricultural consultants",
+      "ai_features": ["Soil composition analysis", "Crop-specific fertilizer recommendations"],
+      "key_features": ["Real-time NPK measurement", "pH level detection", "Moisture depth analysis up to 12 inches", "GPS-tagged readings", "Fertilizer recommendation engine"],
+      "technical_approach": "Simulated sensor readings with crop-specific optimization",
+      "id": "tool_003",
+      "created_at": "2026-01-09T03:39:33.795022",
+      "status": "built",
+      "slug": "soilsense-pro",
+      "published_at": "2026-01-09T09:30:00.000000",
+      "url": "tools/soilsense-pro/index.html"
     }
   ],
-  "last_updated": "2026-01-09T02:41:02.755543"
+  "last_updated": "2026-01-09T09:30:00.000000"
 }

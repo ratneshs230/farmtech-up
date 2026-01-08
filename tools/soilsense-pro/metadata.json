@@ -1,0 +1,27 @@
+{
+  "name": "SoilSense Pro",
+  "name_hindi": "मिट्टी परीक्षक प्रो",
+  "short_description": "A handheld device that instantly analyzes soil composition, pH levels, moisture content, and nutrient deficiencies by inserting a probe into the ground. Results are displayed on an attached screen and synced to a mobile app for tracking field health over time.",
+  "pain_point": "Farmers often don't know the exact nutrient levels in their soil, leading to over or under application of fertilizers",
+  "opportunity": "Precise soil analysis can optimize fertilizer use, saving costs and improving yields",
+  "target_users": "Small to medium-scale farmers, organic growers, and agricultural consultants",
+  "ai_features": [
+    "Soil composition analysis",
+    "Crop-specific fertilizer recommendations",
+    "Historical trend analysis"
+  ],
+  "key_features": [
+    "Real-time NPK (nitrogen, phosphorus, potassium) measurement",
+    "pH level detection with lime/sulfur recommendations",
+    "Moisture depth analysis up to 12 inches",
+    "GPS-tagged readings for field mapping",
+    "Historical data tracking and trend analysis",
+    "Fertilizer recommendation engine based on crop type"
+  ],
+  "technical_approach": "Simulated sensor readings with crop-specific optimization algorithms",
+  "id": "tool_003",
+  "created_at": "2026-01-09T03:39:33.795022",
+  "built_at": "2026-01-09T09:30:00.000000",
+  "status": "built",
+  "files": ["index.html", "style.css", "script.js", "infographic.svg"]
+}

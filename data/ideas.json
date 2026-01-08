@@ -32,8 +32,54 @@
       "technical_approach": "",
       "id": "tool_002",
       "created_at": "2026-01-09T02:10:58.795008",
+      "status": "built"
+    },
+    {
+      "name": "SoilSense Pro",
+      "name_hindi": "",
+      "short_description": "A handheld device that instantly analyzes soil composition, pH levels, moisture content, and nutrient deficiencies by inserting a probe into the ground. Results are displayed on an attached screen and synced to a mobile app for tracking field health over time.",
+      "pain_point": "",
+      "opportunity": "",
+      "target_users": "Small to medium-scale farmers, organic growers, and agricultural consultants",
+      "ai_features": [],
+      "key_features": [
+        "Real-time NPK (nitrogen, phosphorus, potassium) measurement",
+        "pH level detection with lime/sulfur recommendations",
+        "Moisture depth analysis up to 12 inches",
+        "GPS-tagged readings for field mapping",
+        "Historical data tracking and trend analysis",
+        "Fertilizer recommendation engine based on crop type"
+      ],
+      "technical_approach": "",
+      "id": "tool_003",
+      "created_at": "2026-01-09T03:39:33.795022",
+      "status": "built"
+    },
+    {
+      "name": "CropWhisperer",
+      "name_hindi": "फसल संवाद",
+      "short_description": "A smartphone-connected acoustic sensor that clips onto plant stems to detect early signs of pest infestation and water stress by analyzing the ultrasonic vibrations plants emit. The app alerts farmers before visible damage occurs and identifies the specific pest or stress type.",
+      "pain_point": "Farmers often detect pest damage or plant stress only after visible symptoms appear, by which time significant crop loss has already occurred. Early intervention could save 20-40% of crops.",
+      "opportunity": "Plants emit distinct acoustic signatures when under attack or stressed - this bio-acoustic data can be captured and analyzed to provide early warning systems accessible to smallholder farmers.",
+      "target_users": "Vegetable and fruit farmers, greenhouse operators, and high-value crop growers",
+      "ai_features": [
+        "AI-powered acoustic pattern recognition for pest identification",
+        "Machine learning model trained on 50+ common crop stress signatures",
+        "Predictive alerts based on environmental conditions and historical patterns"
+      ],
+      "key_features": [
+        "Clip-on sensor with 7-day battery life",
+        "Real-time plant health monitoring via mobile app",
+        "Pest species identification from acoustic signatures",
+        "Water stress detection 48-72 hours before wilting",
+        "Multi-sensor network support for field-wide coverage",
+        "Offline mode with automatic sync"
+      ],
+      "technical_approach": "Piezoelectric contact microphone captures plant stem vibrations in 20-150kHz range. Edge AI on sensor performs initial filtering, sends compressed data to phone app for full analysis using TensorFlow Lite model.",
+      "id": "tool_004",
+      "created_at": "2026-01-09T03:47:26.647111",
       "status": "pending"
     }
   ],
-  "last_updated": "2026-01-09T02:10:58.795028"
+  "last_updated": "2026-01-09T03:47:26.647129"
 }

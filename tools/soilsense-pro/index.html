@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoilSense Pro | मिट्टी परीक्षक प्रो</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌾 SoilSense Pro</h1>
+            <p class="subtitle">मिट्टी परीक्षक प्रो</p>
+            <p class="tagline">Complete Soil Analysis / संपूर्ण मिट्टी विश्लेषण</p>
+        </header>
+
+        <main>
+            <!-- Scan Button -->
+            <section class="scan-section">
+                <button id="scanBtn" class="btn-scan">
+                    <span class="scan-icon">📡</span>
+                    <span class="scan-text">Scan Soil / मिट्टी स्कैन करें</span>
+                </button>
+                <p class="scan-hint">Insert probe into soil and press scan / मिट्टी में प्रोब डालें और स्कैन दबाएं</p>
+            </section>
+
+            <!-- Loading State -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loader"></div>
+                <p>Analyzing soil... / मिट्टी का विश्लेषण हो रहा है...</p>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <!-- Moisture -->
+                <div class="result-card moisture-card">
+                    <div class="result-header">
+                        <span class="result-icon">💧</span>
+                        <h3>Moisture / नमी</h3>
+                    </div>
+                    <div class="result-value">
+                        <span id="moistureValue">--</span>
+                        <span class="unit">%</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="bar-fill moisture-fill" id="moistureBar"></div>
+                    </div>
+                    <p class="result-status" id="moistureStatus">--</p>
+                </div>
+
+                <!-- pH Level -->
+                <div class="result-card ph-card">
+                    <div class="result-header">
+                        <span class="result-icon">⚗️</span>
+                        <h3>pH Level / पीएच स्तर</h3>
+                    </div>
+                    <div class="result-value">
+                        <span id="phValue">--</span>
+                    </div>
+                    <div class="ph-scale">
+                        <div class="ph-marker" id="phMarker"></div>
+                        <div class="ph-labels">
+                            <span>Acidic</span>
+                            <span>Neutral</span>
+                            <span>Alkaline</span>
+                        </div>
+                    </div>
+                    <p class="result-status" id="phStatus">--</p>
+                </div>
+
+                <!-- NPK Values -->
+                <div class="result-card npk-card">
+                    <div class="result-header">
+                        <span class="result-icon">🧪</span>
+                        <h3>NPK Levels / एनपीके स्तर</h3>
+                    </div>
+                    <div class="npk-grid">
+                        <div class="npk-item nitrogen">
+                            <span class="npk-label">N</span>
+                            <span class="npk-value" id="nitrogenValue">--</span>
+                            <span class="npk-unit">kg/ha</span>
+                            <p class="npk-name">Nitrogen / नाइट्रोजन</p>
+                        </div>
+                        <div class="npk-item phosphorus">
+                            <span class="npk-label">P</span>
+                            <span class="npk-value" id="phosphorusValue">--</span>
+                            <span class="npk-unit">kg/ha</span>
+                            <p class="npk-name">Phosphorus / फास्फोरस</p>
+                        </div>
+                        <div class="npk-item potassium">
+                            <span class="npk-label">K</span>
+                            <span class="npk-value" id="potassiumValue">--</span>
+                            <span class="npk-unit">kg/ha</span>
+                            <p class="npk-name">Potassium / पोटेशियम</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depth Analysis -->
+                <div class="result-card depth-card">
+                    <div class="result-header">
+                        <span class="result-icon">📏</span>
+                        <h3>Depth Analysis / गहराई विश्लेषण</h3>
+                    </div>
+                    <div class="depth-levels">
+                        <div class="depth-level">
+                            <span class="depth-label">0-4 inch</span>
+                            <div class="depth-bar">
+                                <div class="depth-fill" id="depth1"></div>
+                            </div>
+                            <span class="depth-value" id="depth1Value">--%</span>
+                        </div>
+                        <div class="depth-level">
+                            <span class="depth-label">4-8 inch</span>
+                            <div class="depth-bar">
+                                <div class="depth-fill" id="depth2"></div>
+                            </div>
+                            <span class="depth-value" id="depth2Value">--%</span>
+                        </div>
+                        <div class="depth-level">
+                            <span class="depth-label">8-12 inch</span>
+                            <div class="depth-bar">
+                                <div class="depth-fill" id="depth3"></div>
+                            </div>
+                            <span class="depth-value" id="depth3Value">--%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations -->
+            <section class="recommendations-section" id="recommendationsSection" style="display: none;">
+                <h2>🎯 Recommendations / सिफारिशें</h2>
+                <div id="recommendationsList"></div>
+            </section>
+
+            <!-- Crop Selection -->
+            <section class="crop-section">
+                <label for="cropSelect">🌱 Select Crop / फसल चुनें</label>
+                <select id="cropSelect">
+                    <option value="wheat">Wheat / गेहूं</option>
+                    <option value="rice">Rice / चावल</option>
+                    <option value="sugarcane">Sugarcane / गन्ना</option>
+                    <option value="potato">Potato / आलू</option>
+                    <option value="mustard">Mustard / सरसों</option>
+                    <option value="vegetables">Vegetables / सब्जियां</option>
+                </select>
+            </section>
+
+            <!-- History Section -->
+            <section class="history-section">
+                <h2>📊 Reading History / रीडिंग इतिहास</h2>
+                <div id="historyList" class="history-list">
+                    <p class="no-history">No readings yet / अभी तक कोई रीडिंग नहीं</p>
+                </div>
+                <button id="clearHistory" class="btn-secondary">🗑️ Clear History / इतिहास मिटाएं</button>
+            </section>
+
+            <!-- GPS Location -->
+            <section class="location-section">
+                <button id="saveLocation" class="btn-location">
+                    <span>📍</span> Save Location / स्थान सहेजें
+                </button>
+                <p class="location-display" id="locationDisplay">Location not saved / स्थान सहेजा नहीं गया</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Empowering Farmers / किसानों को सशक्त बनाना 🌾</p>
+            <p class="offline-msg" id="offlineMsg" style="display: none;">⚠️ Offline Mode / ऑफलाइन मोड</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

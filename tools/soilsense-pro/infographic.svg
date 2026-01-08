@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f5e9"/>
+      <stop offset="100%" style="stop-color:#c8e6c9"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4caf50"/>
+      <stop offset="100%" style="stop-color:#2e7d32"/>
+    </linearGradient>
+    <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8d6e63"/>
+      <stop offset="100%" style="stop-color:#5d4037"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="100" fill="url(#greenGrad)"/>
+  <text x="400" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">SoilSense Pro</text>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#c8e6c9">मिट्टी परीक्षक प्रो - Complete Soil Analysis</text>
+
+  <!-- Probe Illustration -->
+  <g transform="translate(100, 150)">
+    <!-- Probe handle -->
+    <rect x="20" y="0" width="60" height="80" rx="10" fill="#424242"/>
+    <rect x="25" y="5" width="50" height="40" rx="5" fill="#2196f3"/>
+    <text x="50" y="35" text-anchor="middle" font-family="Arial" font-size="12" fill="white">pH 6.5</text>
+    <!-- Probe shaft -->
+    <rect x="40" y="80" width="20" height="150" fill="#616161"/>
+    <!-- Probe tip -->
+    <polygon points="40,230 60,230 50,280" fill="#9e9e9e"/>
+    <!-- Soil layers -->
+    <rect x="-30" y="180" width="160" height="120" fill="url(#soilGrad)" rx="5"/>
+    <text x="50" y="220" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff">0-4 inch</text>
+    <text x="50" y="250" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff">4-8 inch</text>
+    <text x="50" y="280" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff">8-12 inch</text>
+  </g>
+
+  <!-- NPK Display -->
+  <g transform="translate(280, 130)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">NPK Analysis / एनपीके विश्लेषण</text>
+
+    <!-- Nitrogen -->
+    <rect x="0" y="20" width="140" height="80" rx="10" fill="#e3f2fd"/>
+    <text x="70" y="50" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#3f51b5">N</text>
+    <text x="70" y="75" text-anchor="middle" font-family="Arial" font-size="14" fill="#3f51b5">Nitrogen</text>
+    <text x="70" y="92" text-anchor="middle" font-family="Arial" font-size="11" fill="#5d4037">नाइट्रोजन</text>
+
+    <!-- Phosphorus -->
+    <rect x="150" y="20" width="140" height="80" rx="10" fill="#fce4ec"/>
+    <text x="220" y="50" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#e91e63">P</text>
+    <text x="220" y="75" text-anchor="middle" font-family="Arial" font-size="14" fill="#e91e63">Phosphorus</text>
+    <text x="220" y="92" text-anchor="middle" font-family="Arial" font-size="11" fill="#5d4037">फास्फोरस</text>
+
+    <!-- Potassium -->
+    <rect x="300" y="20" width="140" height="80" rx="10" fill="#fff3e0"/>
+    <text x="370" y="50" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#ff9800">K</text>
+    <text x="370" y="75" text-anchor="middle" font-family="Arial" font-size="14" fill="#ff9800">Potassium</text>
+    <text x="370" y="92" text-anchor="middle" font-family="Arial" font-size="11" fill="#5d4037">पोटेशियम</text>
+  </g>
+
+  <!-- pH Scale -->
+  <g transform="translate(280, 260)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">pH Level / पीएच स्तर</text>
+    <rect x="0" y="15" width="440" height="30" rx="15" fill="url(#phGrad)"/>
+    <defs>
+      <linearGradient id="phGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#f44336"/>
+        <stop offset="25%" style="stop-color:#ff9800"/>
+        <stop offset="40%" style="stop-color:#ffeb3b"/>
+        <stop offset="50%" style="stop-color:#8bc34a"/>
+        <stop offset="60%" style="stop-color:#4caf50"/>
+        <stop offset="75%" style="stop-color:#03a9f4"/>
+        <stop offset="100%" style="stop-color:#9c27b0"/>
+      </linearGradient>
+    </defs>
+    <text x="0" y="65" font-family="Arial" font-size="12" fill="#5d4037">Acidic / अम्लीय</text>
+    <text x="185" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#5d4037">Neutral / तटस्थ</text>
+    <text x="380" y="65" text-anchor="end" font-family="Arial" font-size="12" fill="#5d4037">Alkaline / क्षारीय</text>
+  </g>
+
+  <!-- Features -->
+  <g transform="translate(280, 350)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">Key Features / मुख्य विशेषताएं</text>
+
+    <g transform="translate(0, 25)">
+      <circle cx="10" cy="10" r="8" fill="#4caf50"/>
+      <text x="25" y="15" font-family="Arial" font-size="14" fill="#5d4037">GPS-tagged readings / जीपीएस-टैग रीडिंग</text>
+    </g>
+
+    <g transform="translate(0, 55)">
+      <circle cx="10" cy="10" r="8" fill="#4caf50"/>
+      <text x="25" y="15" font-family="Arial" font-size="14" fill="#5d4037">Depth analysis up to 12 inches / 12 इंच तक गहराई विश्लेषण</text>
+    </g>
+
+    <g transform="translate(0, 85)">
+      <circle cx="10" cy="10" r="8" fill="#4caf50"/>
+      <text x="25" y="15" font-family="Arial" font-size="14" fill="#5d4037">Crop-specific recommendations / फसल-विशिष्ट सिफारिशें</text>
+    </g>
+
+    <g transform="translate(0, 115)">
+      <circle cx="10" cy="10" r="8" fill="#4caf50"/>
+      <text x="25" y="15" font-family="Arial" font-size="14" fill="#5d4037">Historical data tracking / ऐतिहासिक डेटा ट्रैकिंग</text>
+    </g>
+
+    <g transform="translate(0, 145)">
+      <circle cx="10" cy="10" r="8" fill="#4caf50"/>
+      <text x="25" y="15" font-family="Arial" font-size="14" fill="#5d4037">Offline capable / ऑफलाइन उपयोग</text>
+    </g>
+  </g>
+
+  <!-- Moisture indicator -->
+  <g transform="translate(100, 430)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2e7d32">💧 Moisture / नमी</text>
+    <rect x="0" y="15" width="100" height="20" rx="10" fill="#e0e0e0"/>
+    <rect x="0" y="15" width="65" height="20" rx="10" fill="#2196f3"/>
+    <text x="110" y="30" font-family="Arial" font-size="14" fill="#5d4037">65%</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="560" width="800" height="40" fill="url(#greenGrad)"/>
+  <text x="400" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="white">FarmTech UP - Empowering Farmers / किसानों को सशक्त बनाना</text>
+</svg>

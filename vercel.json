@@ -1,6 +1,11 @@
 {
+  "buildCommand": "",
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/", "destination": "/showcase/index.html" },
+    { "source": "/style.css", "destination": "/showcase/style.css" },
+    { "source": "/script.js", "destination": "/showcase/script.js" },
+    { "source": "/assets/:path*", "destination": "/showcase/assets/:path*" },
     { "source": "/tools/:path*", "destination": "/tools/:path*" }
   ]
 }

@@ -72,7 +72,7 @@ class Publisher:
         return f'''
     <div class="tool-card" data-id="{tool.get('id', '')}">
       <div class="tool-image">
-        <img src="../tools/{slug}/infographic.svg" alt="{name}" onerror="this.src='assets/placeholder.svg'">
+        <img src="/tools/{slug}/infographic.svg" alt="{name}" onerror="this.src='/assets/placeholder.svg'">
       </div>
       <div class="tool-content">
         <h2 class="tool-name">{name}</h2>
@@ -81,7 +81,7 @@ class Publisher:
         <ul class="tool-features">
           {features_html}
         </ul>
-        <a href="../tools/{slug}/index.html" class="tool-link">Try Now / अभी आज़माएं →</a>
+        <a href="/tools/{slug}/index.html" class="tool-link">Try Now / अभी आज़माएं →</a>
       </div>
     </div>'''
 

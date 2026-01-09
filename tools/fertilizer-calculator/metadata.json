@@ -1,0 +1,17 @@
+{
+  "name": "Fertilizer Calculator",
+  "name_hindi": "खाद कैलकुलेटर",
+  "short_description": "Calculate exact fertilizer quantities needed for your crop based on field size, soil type, and yield target.",
+  "pain_point": "Over or under application of fertilizers wastes money and harms soil health",
+  "opportunity": "Precise fertilizer application can save 20% costs while improving yields",
+  "target_users": "All farmers in UP",
+  "ai_features": ["Soil-adjusted recommendations", "Cost optimization", "Application scheduling"],
+  "key_features": ["7 major crops", "4 soil types", "NPK calculation", "Fertilizer quantities", "Application schedule", "Cost estimate"],
+  "technical_approach": "Agronomic formulas with soil and yield adjustments",
+  "id": "tool_008",
+  "created_at": "2026-01-09T10:30:00.000000",
+  "built_at": "2026-01-09T10:30:00.000000",
+  "status": "built",
+  "slug": "fertilizer-calculator",
+  "files": ["index.html", "style.css", "script.js"]
+}

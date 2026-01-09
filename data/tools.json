@@ -3,37 +3,111 @@
     {
       "name": "Smart Soil Moisture Probe",
       "name_hindi": "स्मार्ट मिट्टी नमी जांच",
-      "short_description": "A handheld probe that measures soil moisture levels at various depths and provides instant recommendations for irrigation timing and water volume based on crop type and growth stage.",
-      "pain_point": "Farmers struggle to know optimal irrigation timing",
-      "opportunity": "Proper moisture management can increase yields by 20%",
-      "target_users": "Farmers in UP",
-      "ai_features": [],
-      "key_features": ["GPS-tagged moisture readings", "Color-coded field visualization", "Historical moisture trend tracking"],
-      "technical_approach": "",
+      "short_description": "A handheld probe that measures soil moisture levels at various depths and provides instant recommendations for irrigation timing.",
       "id": "tool_002",
-      "created_at": "2026-01-09T02:10:58.795008",
       "status": "built",
       "slug": "smart-soil-moisture-probe",
-      "published_at": "2026-01-09T02:41:02.755229",
       "url": "tools/smart-soil-moisture-probe/index.html"
     },
     {
       "name": "SoilSense Pro",
       "name_hindi": "मिट्टी परीक्षक प्रो",
-      "short_description": "A handheld device that instantly analyzes soil composition, pH levels, moisture content, and nutrient deficiencies by inserting a probe into the ground.",
-      "pain_point": "Farmers often don't know the exact nutrient levels in their soil",
-      "opportunity": "Precise soil analysis can optimize fertilizer use, saving costs and improving yields",
-      "target_users": "Small to medium-scale farmers, organic growers, and agricultural consultants",
-      "ai_features": ["Soil composition analysis", "Crop-specific fertilizer recommendations"],
-      "key_features": ["Real-time NPK measurement", "pH level detection", "Moisture depth analysis up to 12 inches", "GPS-tagged readings", "Fertilizer recommendation engine"],
-      "technical_approach": "Simulated sensor readings with crop-specific optimization",
+      "short_description": "Complete soil analysis with NPK, pH, and moisture measurement. GPS-tagged readings for field mapping.",
       "id": "tool_003",
-      "created_at": "2026-01-09T03:39:33.795022",
       "status": "built",
       "slug": "soilsense-pro",
-      "published_at": "2026-01-09T09:30:00.000000",
       "url": "tools/soilsense-pro/index.html"
+    },
+    {
+      "name": "Crop Disease Detector",
+      "name_hindi": "फसल रोग पहचान",
+      "short_description": "Take a photo of your crop leaf to instantly identify diseases and get treatment recommendations.",
+      "id": "tool_005",
+      "status": "built",
+      "slug": "crop-disease-detector",
+      "url": "tools/crop-disease-detector/index.html"
+    },
+    {
+      "name": "Mandi Price Tracker",
+      "name_hindi": "मंडी भाव ट्रैकर",
+      "short_description": "Check real-time crop prices from local mandis across UP. Set price alerts and track trends.",
+      "id": "tool_006",
+      "status": "built",
+      "slug": "mandi-price-tracker",
+      "url": "tools/mandi-price-tracker/index.html"
+    },
+    {
+      "name": "Weather Alert",
+      "name_hindi": "मौसम अलर्ट",
+      "short_description": "Get weather forecasts, farming alerts, and irrigation advice tailored for UP farmers.",
+      "id": "tool_007",
+      "status": "built",
+      "slug": "weather-alert",
+      "url": "tools/weather-alert/index.html"
+    },
+    {
+      "name": "Fertilizer Calculator",
+      "name_hindi": "खाद कैलकुलेटर",
+      "short_description": "Calculate exact fertilizer quantities needed for your crop based on field size and soil type.",
+      "id": "tool_008",
+      "status": "built",
+      "slug": "fertilizer-calculator",
+      "url": "tools/fertilizer-calculator/index.html"
+    },
+    {
+      "name": "Crop Calendar",
+      "name_hindi": "फसल कैलेंडर",
+      "short_description": "View sowing, irrigation, fertilizer, and harvest schedules for major UP crops.",
+      "id": "tool_009",
+      "status": "built",
+      "slug": "crop-calendar",
+      "url": "tools/crop-calendar/index.html"
+    },
+    {
+      "name": "Pest Identifier",
+      "name_hindi": "कीट पहचान",
+      "short_description": "Identify crop pests from photos and get treatment recommendations in Hindi and English.",
+      "id": "tool_010",
+      "status": "built",
+      "slug": "pest-identifier",
+      "url": "tools/pest-identifier/index.html"
+    },
+    {
+      "name": "Water Usage Tracker",
+      "name_hindi": "पानी उपयोग ट्रैकर",
+      "short_description": "Track irrigation water usage, monitor costs, and get water-saving tips.",
+      "id": "tool_011",
+      "status": "built",
+      "slug": "water-tracker",
+      "url": "tools/water-tracker/index.html"
+    },
+    {
+      "name": "Yield Estimator",
+      "name_hindi": "उपज अनुमान",
+      "short_description": "Estimate expected crop yield based on field size, soil quality, and irrigation availability.",
+      "id": "tool_012",
+      "status": "built",
+      "slug": "yield-estimator",
+      "url": "tools/yield-estimator/index.html"
+    },
+    {
+      "name": "Loan Calculator",
+      "name_hindi": "कृषि ऋण कैलकुलेटर",
+      "short_description": "Calculate EMI for agricultural loans including KCC, crop loans, and equipment financing.",
+      "id": "tool_013",
+      "status": "built",
+      "slug": "loan-calculator",
+      "url": "tools/loan-calculator/index.html"
+    },
+    {
+      "name": "Seed Variety Guide",
+      "name_hindi": "बीज किस्म गाइड",
+      "short_description": "Compare seed varieties for wheat, rice, mustard, and potato. Find the best variety for your conditions.",
+      "id": "tool_014",
+      "status": "built",
+      "slug": "seed-variety-guide",
+      "url": "tools/seed-variety-guide/index.html"
     }
   ],
-  "last_updated": "2026-01-09T09:30:00.000000"
+  "last_updated": "2026-01-09T11:00:00.000000"
 }

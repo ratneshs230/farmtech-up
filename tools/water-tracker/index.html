@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tracker | पानी ट्रैकर</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💧 Water Tracker</h1>
+            <p class="subtitle">पानी ट्रैकर</p>
+        </header>
+        <main>
+            <section class="summary-section">
+                <div class="summary-card">
+                    <span class="summary-icon">💧</span>
+                    <span class="summary-value" id="totalWater">0</span>
+                    <span class="summary-label">Total (L) / कुल (लीटर)</span>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-icon">📊</span>
+                    <span class="summary-value" id="avgDaily">0</span>
+                    <span class="summary-label">Avg/Day / औसत/दिन</span>
+                </div>
+                <div class="summary-card">
+                    <span class="summary-icon">💰</span>
+                    <span class="summary-value" id="totalCost">₹0</span>
+                    <span class="summary-label">Cost / लागत</span>
+                </div>
+            </section>
+
+            <section class="input-section">
+                <h2>➕ Log Irrigation / सिंचाई दर्ज करें</h2>
+                <div class="input-form">
+                    <div class="input-group">
+                        <label>Field / खेत</label>
+                        <select id="fieldSelect">
+                            <option value="field1">Field 1 / खेत 1</option>
+                            <option value="field2">Field 2 / खेत 2</option>
+                            <option value="field3">Field 3 / खेत 3</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Duration (hours) / समय (घंटे)</label>
+                        <input type="number" id="duration" min="0.5" step="0.5" placeholder="2">
+                    </div>
+                    <div class="input-group">
+                        <label>Source / स्रोत</label>
+                        <select id="sourceSelect">
+                            <option value="tubewell">Tubewell / ट्यूबवेल</option>
+                            <option value="canal">Canal / नहर</option>
+                            <option value="pond">Pond / तालाब</option>
+                        </select>
+                    </div>
+                    <button id="logBtn" class="btn-log">💧 Log Irrigation / सिंचाई दर्ज करें</button>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2>📋 Irrigation History / सिंचाई इतिहास</h2>
+                <div id="historyList"></div>
+            </section>
+
+            <section class="tips-section">
+                <h2>💡 Water Saving Tips / पानी बचाने के टिप्स</h2>
+                <div class="tips-list">
+                    <div class="tip-item">🌅 Irrigate early morning or evening / सुबह या शाम सिंचाई करें</div>
+                    <div class="tip-item">🌾 Use mulch to retain moisture / नमी बनाए रखने के लिए मल्च करें</div>
+                    <div class="tip-item">💧 Check soil before irrigating / सिंचाई से पहले मिट्टी जांचें</div>
+                    <div class="tip-item">🚰 Maintain channels to avoid leakage / चैनल बनाए रखें</div>
+                </div>
+            </section>
+        </main>
+        <footer><p>🌾 FarmTech UP - Save Water, Save Money / पानी बचाएं, पैसा बचाएं 🌾</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

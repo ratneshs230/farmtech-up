@@ -1,0 +1,15 @@
+{
+  "name": "Pest Identifier",
+  "name_hindi": "कीट पहचान",
+  "short_description": "Identify crop pests from photos and get treatment recommendations in Hindi and English.",
+  "pain_point": "Farmers struggle to identify pests correctly and use wrong pesticides",
+  "opportunity": "Correct pest identification can reduce pesticide costs by 30%",
+  "target_users": "All farmers in UP",
+  "ai_features": ["Image-based pest identification", "Treatment recommendations"],
+  "key_features": ["Photo capture", "5 crop categories", "Common pest reference", "Treatment advice"],
+  "technical_approach": "Simulated AI identification with comprehensive pest database",
+  "id": "tool_010",
+  "status": "built",
+  "slug": "pest-identifier",
+  "files": ["index.html", "style.css", "script.js"]
+}

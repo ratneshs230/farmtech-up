@@ -1,0 +1,15 @@
+{
+  "name": "Crop Calendar",
+  "name_hindi": "फसल कैलेंडर",
+  "short_description": "View sowing, irrigation, fertilizer, and harvest schedules for major UP crops throughout the year.",
+  "pain_point": "Missing critical farming timelines leads to reduced yields",
+  "opportunity": "Following optimal schedules can improve yields by 15-20%",
+  "target_users": "All farmers in UP",
+  "ai_features": ["Seasonal task recommendations", "Custom reminders"],
+  "key_features": ["6 major crops", "Monthly task view", "Current month highlights", "Custom reminders"],
+  "technical_approach": "Pre-defined agricultural calendars with reminder system",
+  "id": "tool_009",
+  "status": "built",
+  "slug": "crop-calendar",
+  "files": ["index.html", "style.css", "script.js"]
+}

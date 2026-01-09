@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandi Price Tracker | मंडी भाव</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Mandi Price Tracker</h1>
+            <p class="subtitle">मंडी भाव ट्रैकर</p>
+            <p class="tagline">Real-time market prices / वास्तविक समय बाजार भाव</p>
+        </header>
+
+        <main>
+            <!-- Location Selection -->
+            <section class="location-section">
+                <div class="select-group">
+                    <label>📍 District / जिला</label>
+                    <select id="districtSelect">
+                        <option value="lucknow">Lucknow / लखनऊ</option>
+                        <option value="kanpur">Kanpur / कानपुर</option>
+                        <option value="agra">Agra / आगरा</option>
+                        <option value="varanasi">Varanasi / वाराणसी</option>
+                        <option value="allahabad">Prayagraj / प्रयागराज</option>
+                        <option value="meerut">Meerut / मेरठ</option>
+                        <option value="gorakhpur">Gorakhpur / गोरखपुर</option>
+                        <option value="bareilly">Bareilly / बरेली</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label>🏪 Mandi / मंडी</label>
+                    <select id="mandiSelect">
+                        <option value="main">Main Mandi / मुख्य मंडी</option>
+                        <option value="krishi">Krishi Upaj Mandi / कृषि उपज मंडी</option>
+                        <option value="sabji">Sabji Mandi / सब्जी मंडी</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Refresh Button -->
+            <button id="refreshBtn" class="btn-refresh">
+                <span>🔄</span> Refresh Prices / भाव अपडेट करें
+            </button>
+
+            <!-- Last Updated -->
+            <p class="last-updated" id="lastUpdated">Last updated: -- / अंतिम अपडेट: --</p>
+
+            <!-- Price Categories -->
+            <section class="category-tabs">
+                <button class="tab-btn active" data-category="grains">🌾 Grains / अनाज</button>
+                <button class="tab-btn" data-category="vegetables">🥬 Vegetables / सब्जी</button>
+                <button class="tab-btn" data-category="pulses">🫘 Pulses / दाल</button>
+                <button class="tab-btn" data-category="oilseeds">🌻 Oilseeds / तिलहन</button>
+            </section>
+
+            <!-- Price List -->
+            <section class="price-list" id="priceList">
+                <!-- Dynamic content -->
+            </section>
+
+            <!-- Price Alerts -->
+            <section class="alerts-section">
+                <h2>🔔 Price Alerts / मूल्य अलर्ट</h2>
+                <div class="alert-form">
+                    <select id="alertCrop">
+                        <option value="">Select crop / फसल चुनें</option>
+                        <option value="wheat">Wheat / गेहूं</option>
+                        <option value="rice">Rice / धान</option>
+                        <option value="potato">Potato / आलू</option>
+                        <option value="onion">Onion / प्याज</option>
+                    </select>
+                    <input type="number" id="alertPrice" placeholder="Min price / न्यूनतम भाव">
+                    <button id="addAlert" class="btn-add">➕</button>
+                </div>
+                <div id="alertsList" class="alerts-list"></div>
+            </section>
+
+            <!-- Trends -->
+            <section class="trends-section">
+                <h2>📈 Weekly Trends / साप्ताहिक रुझान</h2>
+                <div id="trendChart" class="trend-chart">
+                    <div class="chart-bars" id="chartBars"></div>
+                    <div class="chart-labels" id="chartLabels"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Better Prices for Farmers / किसानों के लिए बेहतर भाव 🌾</p>
+            <p class="offline-msg" id="offlineMsg" style="display: none;">⚠️ Showing cached prices / कैश्ड भाव दिखा रहे हैं</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root { --primary-green: #2e7d32; --light-green: #4caf50; --cream: #f5f5dc; --white: #fff; --earth-brown: #5d4037; --light-brown: #8d6e63; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(135deg, var(--cream) 0%, #e8f5e9 100%); min-height: 100vh; color: var(--earth-brown); }
+.container { max-width: 480px; margin: 0 auto; padding: 16px; }
+header { text-align: center; padding: 20px 0; border-bottom: 3px solid var(--light-green); margin-bottom: 24px; }
+header h1 { color: var(--primary-green); font-size: 1.5rem; }
+.subtitle { color: var(--light-brown); font-size: 1.1rem; }
+
+.crop-select-section { background: var(--white); padding: 20px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.crop-select-section label { display: block; font-weight: 600; color: var(--primary-green); margin-bottom: 10px; }
+.crop-select-section select { width: 100%; padding: 14px; font-size: 1rem; border: 2px solid var(--light-green); border-radius: 10px; }
+
+.calendar-section { background: var(--white); padding: 20px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.month-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+.month-name { font-weight: 600; min-width: 80px; }
+.month-tasks { display: flex; gap: 6px; flex-wrap: wrap; }
+.task-badge { padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
+.task-sowing { background: #e8f5e9; color: #2e7d32; }
+.task-irrigation { background: #e3f2fd; color: #1976d2; }
+.task-fertilizer { background: #fff3e0; color: #f57c00; }
+.task-harvest { background: #fce4ec; color: #c2185b; }
+.task-pest { background: #ffebee; color: #c62828; }
+.current-month { background: linear-gradient(145deg, #e8f5e9, #c8e6c9); border-radius: 8px; padding: 12px; margin: -12px -12px 12px -12px; }
+
+.current-tasks { background: var(--white); padding: 20px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.current-tasks h2 { font-size: 1.1rem; color: var(--primary-green); margin-bottom: 16px; }
+.task-item { padding: 12px; background: #f9fbe7; border-left: 4px solid var(--primary-green); border-radius: 0 8px 8px 0; margin-bottom: 10px; }
+.task-title { font-weight: 600; color: var(--primary-green); }
+.task-desc { font-size: 0.85rem; color: var(--earth-brown); margin-top: 4px; }
+
+.reminders-section { background: var(--white); padding: 20px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.reminders-section h2 { font-size: 1.1rem; color: var(--primary-green); margin-bottom: 16px; }
+.reminder-form { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.reminder-form input { flex: 1; min-width: 120px; padding: 10px; border: 2px solid var(--light-green); border-radius: 8px; }
+.btn-add { padding: 10px 16px; background: var(--primary-green); color: white; border: none; border-radius: 8px; cursor: pointer; }
+.reminder-item { display: flex; justify-content: space-between; padding: 10px; background: #fff3e0; border-radius: 8px; margin-bottom: 8px; }
+
+footer { text-align: center; padding: 20px; color: var(--light-brown); }

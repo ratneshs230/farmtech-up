@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Identifier | कीट पहचान</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐛 Pest Identifier</h1>
+            <p class="subtitle">कीट पहचान</p>
+        </header>
+
+        <main>
+            <section class="capture-section">
+                <div class="preview-container" id="previewContainer">
+                    <div class="placeholder" id="placeholder">
+                        <span>📷</span>
+                        <p>Take photo of pest / कीट की फोटो लें</p>
+                    </div>
+                    <img id="previewImage" style="display:none;">
+                </div>
+                <div class="button-group">
+                    <label class="btn-capture" for="cameraInput"><span>📸</span> Camera</label>
+                    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+                    <label class="btn-upload" for="galleryInput"><span>🖼️</span> Gallery</label>
+                    <input type="file" id="galleryInput" accept="image/*" hidden>
+                </div>
+            </section>
+
+            <section class="crop-section">
+                <label>🌱 Affected Crop / प्रभावित फसल</label>
+                <select id="cropSelect">
+                    <option value="wheat">Wheat / गेहूं</option>
+                    <option value="rice">Rice / धान</option>
+                    <option value="vegetables">Vegetables / सब्जी</option>
+                    <option value="sugarcane">Sugarcane / गन्ना</option>
+                    <option value="cotton">Cotton / कपास</option>
+                </select>
+            </section>
+
+            <button id="identifyBtn" class="btn-identify" disabled>
+                <span>🔍</span> Identify Pest / कीट पहचानें
+            </button>
+
+            <section class="loading-section" id="loadingSection" style="display:none;">
+                <div class="loader"></div>
+                <p>Analyzing... / विश्लेषण हो रहा है...</p>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display:none;">
+                <div class="pest-card">
+                    <div class="pest-header">
+                        <span class="pest-icon" id="pestIcon">🐛</span>
+                        <div>
+                            <h2 id="pestName">--</h2>
+                            <p id="pestNameHindi">--</p>
+                        </div>
+                    </div>
+                    <p class="confidence">Confidence: <span id="confidence">--%</span></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚠️ Damage / नुकसान</h3>
+                    <p id="damageInfo">--</p>
+                </div>
+
+                <div class="info-card treatment">
+                    <h3>💊 Treatment / उपचार</h3>
+                    <div id="treatmentList"></div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🛡️ Prevention / रोकथाम</h3>
+                    <ul id="preventionList"></ul>
+                </div>
+            </section>
+
+            <section class="common-pests">
+                <h2>🔎 Common Pests / आम कीट</h2>
+                <div id="commonPestsList"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Protect Your Crops / अपनी फसल बचाएं 🌾</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

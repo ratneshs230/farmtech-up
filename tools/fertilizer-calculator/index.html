@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Calculator | खाद कैलकुलेटर</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 Fertilizer Calculator</h1>
+            <p class="subtitle">खाद कैलकुलेटर</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-group">
+                    <label>🌱 Select Crop / फसल चुनें</label>
+                    <select id="cropSelect">
+                        <option value="wheat">Wheat / गेहूं</option>
+                        <option value="rice">Rice / धान</option>
+                        <option value="sugarcane">Sugarcane / गन्ना</option>
+                        <option value="potato">Potato / आलू</option>
+                        <option value="mustard">Mustard / सरसों</option>
+                        <option value="maize">Maize / मक्का</option>
+                        <option value="vegetables">Vegetables / सब्जियां</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>📏 Field Area / खेत का क्षेत्र</label>
+                    <div class="area-input">
+                        <input type="number" id="areaValue" placeholder="Enter area" min="0.1" step="0.1">
+                        <select id="areaUnit">
+                            <option value="bigha">Bigha / बीघा</option>
+                            <option value="acre">Acre / एकड़</option>
+                            <option value="hectare">Hectare / हेक्टेयर</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>🌍 Soil Type / मिट्टी का प्रकार</label>
+                    <select id="soilSelect">
+                        <option value="alluvial">Alluvial / जलोढ़</option>
+                        <option value="clay">Clay / चिकनी मिट्टी</option>
+                        <option value="sandy">Sandy / बलुई</option>
+                        <option value="loamy">Loamy / दोमट</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>🎯 Expected Yield / अपेक्षित उपज</label>
+                    <select id="yieldTarget">
+                        <option value="low">Low / कम</option>
+                        <option value="medium" selected>Medium / मध्यम</option>
+                        <option value="high">High / अधिक</option>
+                    </select>
+                </div>
+            </section>
+
+            <button id="calculateBtn" class="btn-calculate">
+                <span>🔢</span> Calculate / गणना करें
+            </button>
+
+            <!-- Results -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h2>📊 Fertilizer Recommendation / खाद की सिफारिश</h2>
+
+                <!-- NPK Summary -->
+                <div class="npk-summary">
+                    <div class="npk-item nitrogen">
+                        <span class="npk-label">N</span>
+                        <span class="npk-value" id="nitrogenNeed">--</span>
+                        <span class="npk-unit">kg</span>
+                    </div>
+                    <div class="npk-item phosphorus">
+                        <span class="npk-label">P</span>
+                        <span class="npk-value" id="phosphorusNeed">--</span>
+                        <span class="npk-unit">kg</span>
+                    </div>
+                    <div class="npk-item potassium">
+                        <span class="npk-label">K</span>
+                        <span class="npk-value" id="potassiumNeed">--</span>
+                        <span class="npk-unit">kg</span>
+                    </div>
+                </div>
+
+                <!-- Fertilizer List -->
+                <div class="fertilizer-list" id="fertilizerList"></div>
+
+                <!-- Application Schedule -->
+                <div class="schedule-section">
+                    <h3>📅 Application Schedule / डालने का समय</h3>
+                    <div id="scheduleList"></div>
+                </div>
+
+                <!-- Cost Estimate -->
+                <div class="cost-section">
+                    <h3>💰 Estimated Cost / अनुमानित लागत</h3>
+                    <div class="cost-display" id="costDisplay">--</div>
+                </div>
+
+                <!-- Tips -->
+                <div class="tips-section">
+                    <h3>💡 Important Tips / महत्वपूर्ण सुझाव</h3>
+                    <div id="tipsList"></div>
+                </div>
+            </section>
+
+            <!-- Saved Calculations -->
+            <section class="history-section">
+                <h2>📋 Saved Calculations / सहेजी गई गणना</h2>
+                <div id="historyList" class="history-list">
+                    <p class="no-history">No saved calculations / कोई सहेजी गई गणना नहीं</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Smart Fertilizer Management / स्मार्ट खाद प्रबंधन 🌾</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

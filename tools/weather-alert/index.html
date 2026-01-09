@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Alert | मौसम अलर्ट</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Alert</h1>
+            <p class="subtitle">मौसम अलर्ट</p>
+        </header>
+
+        <main>
+            <!-- Current Weather -->
+            <section class="current-weather" id="currentWeather">
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+                <div class="temperature">
+                    <span id="tempValue">--</span>
+                    <span class="unit">°C</span>
+                </div>
+                <p class="condition" id="condition">Loading... / लोड हो रहा है...</p>
+                <p class="location" id="location">📍 --</p>
+            </section>
+
+            <!-- Weather Details -->
+            <section class="weather-details">
+                <div class="detail-card">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-value" id="humidity">--%</span>
+                    <span class="detail-label">Humidity / आर्द्रता</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">💨</span>
+                    <span class="detail-value" id="wind">-- km/h</span>
+                    <span class="detail-label">Wind / हवा</span>
+                </div>
+                <div class="detail-card">
+                    <span class="detail-icon">🌧️</span>
+                    <span class="detail-value" id="rainfall">-- mm</span>
+                    <span class="detail-label">Rain / बारिश</span>
+                </div>
+            </section>
+
+            <!-- Active Alerts -->
+            <section class="alerts-section" id="alertsSection">
+                <h2>⚠️ Active Alerts / सक्रिय अलर्ट</h2>
+                <div id="alertsList"></div>
+            </section>
+
+            <!-- 7-Day Forecast -->
+            <section class="forecast-section">
+                <h2>📅 7-Day Forecast / 7 दिन का पूर्वानुमान</h2>
+                <div class="forecast-scroll" id="forecastList"></div>
+            </section>
+
+            <!-- Farming Tips -->
+            <section class="tips-section">
+                <h2>🌾 Today's Farming Tips / आज की खेती टिप्स</h2>
+                <div id="farmingTips"></div>
+            </section>
+
+            <!-- Irrigation Advice -->
+            <section class="irrigation-section">
+                <h2>💧 Irrigation Advice / सिंचाई सलाह</h2>
+                <div class="irrigation-card" id="irrigationAdvice">
+                    <p>Loading... / लोड हो रहा है...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Weather-Smart Farming / मौसम-स्मार्ट खेती 🌾</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

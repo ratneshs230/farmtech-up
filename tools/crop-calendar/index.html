@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Calendar | फसल कैलेंडर</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 Crop Calendar</h1>
+            <p class="subtitle">फसल कैलेंडर</p>
+        </header>
+
+        <main>
+            <section class="crop-select-section">
+                <label>🌱 Select Crop / फसल चुनें</label>
+                <select id="cropSelect">
+                    <option value="wheat">Wheat / गेहूं</option>
+                    <option value="rice">Rice / धान</option>
+                    <option value="sugarcane">Sugarcane / गन्ना</option>
+                    <option value="potato">Potato / आलू</option>
+                    <option value="mustard">Mustard / सरसों</option>
+                    <option value="maize">Maize / मक्का</option>
+                </select>
+            </section>
+
+            <section class="calendar-section" id="calendarSection"></section>
+
+            <section class="current-tasks">
+                <h2>📋 Current Month Tasks / इस महीने के कार्य</h2>
+                <div id="currentTasks"></div>
+            </section>
+
+            <section class="reminders-section">
+                <h2>🔔 Set Reminder / रिमाइंडर सेट करें</h2>
+                <div class="reminder-form">
+                    <input type="text" id="reminderText" placeholder="Task description / कार्य विवरण">
+                    <input type="date" id="reminderDate">
+                    <button id="addReminder" class="btn-add">➕ Add</button>
+                </div>
+                <div id="remindersList"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Plan Your Season / अपना मौसम प्लान करें 🌾</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

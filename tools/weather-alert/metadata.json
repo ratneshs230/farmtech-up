@@ -1,0 +1,17 @@
+{
+  "name": "Weather Alert",
+  "name_hindi": "मौसम अलर्ट",
+  "short_description": "Get weather forecasts, farming alerts, and irrigation advice tailored for UP farmers.",
+  "pain_point": "Unexpected weather causes crop damage worth crores every year in UP",
+  "opportunity": "Weather-smart farming decisions can reduce losses by 25-30%",
+  "target_users": "All farmers in Uttar Pradesh",
+  "ai_features": ["Weather-based irrigation advice", "Smart farming tips", "Predictive alerts"],
+  "key_features": ["Current weather display", "7-day forecast", "Weather alerts", "Farming tips", "Irrigation advice"],
+  "technical_approach": "Simulated weather data with farming-focused recommendations",
+  "id": "tool_007",
+  "created_at": "2026-01-09T10:20:00.000000",
+  "built_at": "2026-01-09T10:20:00.000000",
+  "status": "built",
+  "slug": "weather-alert",
+  "files": ["index.html", "style.css", "script.js"]
+}

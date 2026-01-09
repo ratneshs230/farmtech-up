@@ -1,0 +1,14 @@
+{
+  "name": "Yield Estimator",
+  "name_hindi": "उपज अनुमान",
+  "short_description": "Estimate expected crop yield based on field size, soil quality, and irrigation availability.",
+  "pain_point": "Farmers can't plan finances without knowing expected yields",
+  "opportunity": "Accurate yield estimation helps plan sales and reduces distress selling",
+  "target_users": "All farmers in UP",
+  "ai_features": ["Multi-factor yield calculation", "Profit estimation"],
+  "key_features": ["5 major crops", "Soil & irrigation adjustments", "Market value calculation", "Improvement tips"],
+  "id": "tool_012",
+  "status": "built",
+  "slug": "yield-estimator",
+  "files": ["index.html", "style.css", "script.js"]
+}

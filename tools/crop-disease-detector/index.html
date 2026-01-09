@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Disease Detector | फसल रोग पहचान</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 Crop Disease Detector</h1>
+            <p class="subtitle">फसल रोग पहचान</p>
+            <p class="tagline">Identify diseases instantly / तुरंत रोग पहचानें</p>
+        </header>
+
+        <main>
+            <!-- Camera/Upload Section -->
+            <section class="capture-section">
+                <div class="preview-container" id="previewContainer">
+                    <img id="previewImage" src="" alt="Preview" style="display: none;">
+                    <div class="placeholder" id="placeholder">
+                        <span class="camera-icon">📷</span>
+                        <p>Take or upload a photo of the affected leaf</p>
+                        <p class="hindi">प्रभावित पत्ते की फोटो लें या अपलोड करें</p>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <label class="btn-capture" for="cameraInput">
+                        <span>📸</span> Camera / कैमरा
+                    </label>
+                    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+
+                    <label class="btn-upload" for="galleryInput">
+                        <span>🖼️</span> Gallery / गैलरी
+                    </label>
+                    <input type="file" id="galleryInput" accept="image/*" hidden>
+                </div>
+            </section>
+
+            <!-- Crop Selection -->
+            <section class="crop-section">
+                <label for="cropSelect">🌱 Select your crop / अपनी फसल चुनें</label>
+                <select id="cropSelect">
+                    <option value="wheat">Wheat / गेहूं</option>
+                    <option value="rice">Rice / धान</option>
+                    <option value="potato">Potato / आलू</option>
+                    <option value="tomato">Tomato / टमाटर</option>
+                    <option value="sugarcane">Sugarcane / गन्ना</option>
+                    <option value="mustard">Mustard / सरसों</option>
+                    <option value="maize">Maize / मक्का</option>
+                    <option value="cotton">Cotton / कपास</option>
+                </select>
+            </section>
+
+            <!-- Analyze Button -->
+            <button id="analyzeBtn" class="btn-analyze" disabled>
+                <span>🔍</span> Analyze / विश्लेषण करें
+            </button>
+
+            <!-- Loading -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loader"></div>
+                <p>Analyzing image... / छवि का विश्लेषण हो रहा है...</p>
+            </section>
+
+            <!-- Results -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="disease-card">
+                    <div class="disease-header">
+                        <span class="disease-icon" id="diseaseIcon">🦠</span>
+                        <div>
+                            <h2 id="diseaseName">--</h2>
+                            <p id="diseaseNameHindi" class="hindi">--</p>
+                        </div>
+                    </div>
+
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" id="confidenceFill"></div>
+                    </div>
+                    <p class="confidence-text">Confidence / विश्वास: <span id="confidenceValue">--%</span></p>
+
+                    <div class="severity-badge" id="severityBadge">
+                        <span id="severityText">--</span>
+                    </div>
+                </div>
+
+                <!-- Symptoms -->
+                <div class="info-card">
+                    <h3>🔎 Symptoms / लक्षण</h3>
+                    <ul id="symptomsList"></ul>
+                </div>
+
+                <!-- Treatment -->
+                <div class="info-card treatment-card">
+                    <h3>💊 Treatment / उपचार</h3>
+                    <div id="treatmentList"></div>
+                </div>
+
+                <!-- Prevention -->
+                <div class="info-card">
+                    <h3>🛡️ Prevention / रोकथाम</h3>
+                    <ul id="preventionList"></ul>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="saveResult" class="btn-save">💾 Save / सहेजें</button>
+                    <button id="shareResult" class="btn-share">📤 Share / साझा करें</button>
+                </div>
+            </section>
+
+            <!-- History -->
+            <section class="history-section">
+                <h2>📋 Recent Scans / हाल की जांच</h2>
+                <div id="historyList" class="history-list">
+                    <p class="no-history">No scans yet / अभी तक कोई जांच नहीं</p>
+                </div>
+                <button id="clearHistory" class="btn-secondary">🗑️ Clear History / इतिहास मिटाएं</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌾 FarmTech UP - Protecting Your Crops / आपकी फसलों की रक्षा 🌾</p>
+            <p class="offline-msg" id="offlineMsg" style="display: none;">⚠️ Offline Mode / ऑफलाइन मोड</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

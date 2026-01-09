@@ -1,0 +1,14 @@
+{
+  "name": "Seed Variety Guide",
+  "name_hindi": "बीज किस्म गाइड",
+  "short_description": "Compare seed varieties for wheat, rice, mustard, and potato. Find the best variety for your conditions.",
+  "pain_point": "Farmers often choose wrong varieties leading to poor yields",
+  "opportunity": "Right variety selection can improve yields by 15-25%",
+  "target_users": "All farmers in UP",
+  "ai_features": ["Variety filtering", "Side-by-side comparison"],
+  "key_features": ["4 major crops", "Variety comparison", "Yield data", "Disease resistance info", "Seed rate guidance"],
+  "id": "tool_014",
+  "status": "built",
+  "slug": "seed-variety-guide",
+  "files": ["index.html", "style.css", "script.js"]
+}

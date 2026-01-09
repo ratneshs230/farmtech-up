@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Estimator | उपज अनुमान</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📈 Yield Estimator</h1>
+            <p class="subtitle">उपज अनुमान</p>
+        </header>
+        <main>
+            <section class="input-section">
+                <div class="input-group">
+                    <label>🌱 Crop / फसल</label>
+                    <select id="cropSelect">
+                        <option value="wheat">Wheat / गेहूं</option>
+                        <option value="rice">Rice / धान</option>
+                        <option value="sugarcane">Sugarcane / गन्ना</option>
+                        <option value="potato">Potato / आलू</option>
+                        <option value="mustard">Mustard / सरसों</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>📏 Area (Bigha) / क्षेत्र (बीघा)</label>
+                    <input type="number" id="area" min="1" placeholder="5">
+                </div>
+                <div class="input-group">
+                    <label>🌍 Soil Quality / मिट्टी गुणवत्ता</label>
+                    <select id="soilQuality">
+                        <option value="poor">Poor / खराब</option>
+                        <option value="average" selected>Average / औसत</option>
+                        <option value="good">Good / अच्छी</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>💧 Irrigation / सिंचाई</label>
+                    <select id="irrigation">
+                        <option value="rainfed">Rainfed / बारानी</option>
+                        <option value="partial">Partial / आंशिक</option>
+                        <option value="full" selected>Full / पूर्ण</option>
+                    </select>
+                </div>
+                <button id="estimateBtn" class="btn-estimate">📊 Estimate Yield / उपज अनुमान</button>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display:none;">
+                <h2>📊 Estimated Yield / अनुमानित उपज</h2>
+                <div class="yield-display">
+                    <div class="yield-main">
+                        <span class="yield-value" id="yieldValue">--</span>
+                        <span class="yield-unit" id="yieldUnit">quintals</span>
+                    </div>
+                    <p class="yield-label">Expected from <span id="areaDisplay">--</span> bigha</p>
+                </div>
+                <div class="breakdown">
+                    <div class="breakdown-item"><span>Per Bigha</span><span id="perBigha">-- q</span></div>
+                    <div class="breakdown-item"><span>Market Value</span><span id="marketValue">₹--</span></div>
+                    <div class="breakdown-item"><span>Input Cost (Est.)</span><span id="inputCost">₹--</span></div>
+                    <div class="breakdown-item highlight"><span>Net Profit</span><span id="netProfit">₹--</span></div>
+                </div>
+                <div class="tips-card">
+                    <h3>💡 Yield Improvement Tips</h3>
+                    <div id="tipsList"></div>
+                </div>
+            </section>
+        </main>
+        <footer><p>🌾 FarmTech UP - Plan Your Harvest / अपनी फसल की योजना बनाएं 🌾</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

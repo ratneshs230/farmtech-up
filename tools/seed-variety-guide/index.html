@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seed Variety Guide | बीज किस्म गाइड</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Seed Variety Guide</h1>
+            <p class="subtitle">बीज किस्म गाइड</p>
+        </header>
+        <main>
+            <section class="filter-section">
+                <div class="filter-group">
+                    <label>🌾 Crop / फसल</label>
+                    <select id="cropSelect">
+                        <option value="wheat">Wheat / गेहूं</option>
+                        <option value="rice">Rice / धान</option>
+                        <option value="mustard">Mustard / सरसों</option>
+                        <option value="potato">Potato / आलू</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>🎯 Priority / प्राथमिकता</label>
+                    <select id="prioritySelect">
+                        <option value="all">All / सभी</option>
+                        <option value="yield">High Yield / अधिक उपज</option>
+                        <option value="disease">Disease Resistant / रोग प्रतिरोधी</option>
+                        <option value="early">Early Maturing / जल्दी पकने वाली</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="varieties-section" id="varietiesSection"></section>
+
+            <section class="comparison-section" id="comparisonSection" style="display:none;">
+                <h2>📊 Comparison / तुलना</h2>
+                <div id="comparisonTable"></div>
+                <button id="clearCompare" class="btn-secondary">Clear / साफ करें</button>
+            </section>
+
+            <section class="tips-section">
+                <h2>💡 Seed Selection Tips / बीज चयन टिप्स</h2>
+                <div class="tip-item">✓ Buy certified seeds only / केवल प्रमाणित बीज खरीदें</div>
+                <div class="tip-item">✓ Check germination percentage / अंकुरण प्रतिशत जांचें</div>
+                <div class="tip-item">✓ Match variety to soil type / मिट्टी के अनुसार किस्म चुनें</div>
+                <div class="tip-item">✓ Consider local climate / स्थानीय जलवायु पर विचार करें</div>
+            </section>
+        </main>
+        <footer><p>🌾 FarmTech UP - Choose the Right Seed / सही बीज चुनें 🌾</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

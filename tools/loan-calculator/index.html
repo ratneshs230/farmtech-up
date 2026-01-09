@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator | ऋण कैलकुलेटर</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏦 Loan Calculator</h1>
+            <p class="subtitle">कृषि ऋण कैलकुलेटर</p>
+        </header>
+        <main>
+            <section class="loan-types">
+                <h2>📋 Loan Type / ऋण प्रकार</h2>
+                <div class="type-buttons">
+                    <button class="type-btn active" data-type="kcc">KCC / किसान क्रेडिट कार्ड</button>
+                    <button class="type-btn" data-type="crop">Crop Loan / फसल ऋण</button>
+                    <button class="type-btn" data-type="equipment">Equipment / उपकरण</button>
+                </div>
+            </section>
+
+            <section class="input-section">
+                <div class="input-group">
+                    <label>💰 Loan Amount / ऋण राशि (₹)</label>
+                    <input type="number" id="loanAmount" placeholder="100000" min="1000">
+                </div>
+                <div class="input-group">
+                    <label>📅 Tenure (Months) / अवधि (महीने)</label>
+                    <input type="number" id="tenure" placeholder="12" min="1" max="84">
+                </div>
+                <div class="input-group">
+                    <label>📊 Interest Rate / ब्याज दर (%)</label>
+                    <input type="number" id="interestRate" value="7" min="1" max="20" step="0.1">
+                    <p class="hint">KCC subsidy rate: 4% / KCC सब्सिडी दर: 4%</p>
+                </div>
+                <button id="calculateBtn" class="btn-calculate">🧮 Calculate EMI / EMI गणना</button>
+            </section>
+
+            <section class="results-section" id="resultsSection" style="display:none;">
+                <h2>📊 Loan Summary / ऋण सारांश</h2>
+                <div class="emi-display">
+                    <p class="emi-label">Monthly EMI / मासिक EMI</p>
+                    <p class="emi-value">₹<span id="emiValue">--</span></p>
+                </div>
+                <div class="breakdown">
+                    <div class="breakdown-item"><span>Principal / मूलधन</span><span id="principal">₹--</span></div>
+                    <div class="breakdown-item"><span>Total Interest / कुल ब्याज</span><span id="totalInterest">₹--</span></div>
+                    <div class="breakdown-item highlight"><span>Total Payable / कुल देय</span><span id="totalPayable">₹--</span></div>
+                </div>
+                <div class="subsidy-info" id="subsidyInfo"></div>
+            </section>
+
+            <section class="schemes-section">
+                <h2>📜 Government Schemes / सरकारी योजनाएं</h2>
+                <div class="scheme-card">
+                    <h3>🌾 Kisan Credit Card (KCC)</h3>
+                    <p>Interest: 7% (4% after subsidy) / ब्याज: 7% (सब्सिडी के बाद 4%)</p>
+                    <p>Limit: ₹3 lakh without collateral / सीमा: ₹3 लाख बिना गारंटी</p>
+                </div>
+                <div class="scheme-card">
+                    <h3>🚜 PM-KISAN</h3>
+                    <p>₹6000/year direct benefit / ₹6000/वर्ष सीधा लाभ</p>
+                </div>
+                <div class="scheme-card">
+                    <h3>🏠 Agriculture Infrastructure Fund</h3>
+                    <p>3% interest subvention / 3% ब्याज छूट</p>
+                </div>
+            </section>
+        </main>
+        <footer><p>🌾 FarmTech UP - Financial Planning for Farmers / किसानों के लिए वित्तीय योजना 🌾</p></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

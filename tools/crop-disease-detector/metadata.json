@@ -1,0 +1,24 @@
+{
+  "name": "Crop Disease Detector",
+  "name_hindi": "फसल रोग पहचान",
+  "short_description": "Take a photo of your crop leaf to instantly identify diseases and get treatment recommendations in Hindi and English.",
+  "pain_point": "Farmers often cannot identify crop diseases early, leading to significant yield loss",
+  "opportunity": "Early disease detection can save up to 30% of crop yield",
+  "target_users": "All farmers growing wheat, rice, potato, tomato, sugarcane, mustard, maize, and cotton",
+  "ai_features": ["Image-based disease identification", "Confidence scoring", "Multi-crop support"],
+  "key_features": [
+    "Camera and gallery image support",
+    "8 major crop types supported",
+    "Disease identification with confidence score",
+    "Treatment recommendations in Hindi/English",
+    "Prevention tips",
+    "Scan history tracking"
+  ],
+  "technical_approach": "Simulated AI image analysis with comprehensive disease database",
+  "id": "tool_005",
+  "created_at": "2026-01-09T10:00:00.000000",
+  "built_at": "2026-01-09T10:00:00.000000",
+  "status": "built",
+  "slug": "crop-disease-detector",
+  "files": ["index.html", "style.css", "script.js", "infographic.svg"]
+}

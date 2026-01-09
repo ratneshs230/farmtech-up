@@ -1,0 +1,17 @@
+{
+  "name": "Mandi Price Tracker",
+  "name_hindi": "मंडी भाव ट्रैकर",
+  "short_description": "Check real-time crop prices from local mandis across UP. Set price alerts and track weekly trends.",
+  "pain_point": "Farmers often sell at low prices due to lack of market information",
+  "opportunity": "Access to price data can help farmers get 10-15% better prices",
+  "target_users": "All farmers selling produce in UP mandis",
+  "ai_features": ["Price trend analysis", "Smart alerts"],
+  "key_features": ["8 major UP districts", "4 crop categories", "Price alerts", "Weekly trends", "Offline caching"],
+  "technical_approach": "Simulated real-time price data with district-wise variations",
+  "id": "tool_006",
+  "created_at": "2026-01-09T10:10:00.000000",
+  "built_at": "2026-01-09T10:10:00.000000",
+  "status": "built",
+  "slug": "mandi-price-tracker",
+  "files": ["index.html", "style.css", "script.js"]
+}

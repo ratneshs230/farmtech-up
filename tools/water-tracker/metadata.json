@@ -1,0 +1,14 @@
+{
+  "name": "Water Usage Tracker",
+  "name_hindi": "पानी उपयोग ट्रैकर",
+  "short_description": "Track irrigation water usage, monitor costs, and get water-saving tips.",
+  "pain_point": "Farmers don't track water usage, leading to wastage and high costs",
+  "opportunity": "Water tracking can help save 20-30% on irrigation costs",
+  "target_users": "All farmers in UP",
+  "ai_features": ["Usage analytics", "Cost estimation"],
+  "key_features": ["Log irrigation sessions", "Track by field", "Cost calculation", "Water saving tips"],
+  "id": "tool_011",
+  "status": "built",
+  "slug": "water-tracker",
+  "files": ["index.html", "style.css", "script.js"]
+}

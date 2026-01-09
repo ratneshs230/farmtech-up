@@ -108,6 +108,10 @@ body {
     object-fit: cover;
 }
 
+.tool-emoji {
+    font-size: 5rem;
+}
+
 .tool-content {
     padding: 20px;
 }

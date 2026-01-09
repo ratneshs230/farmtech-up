@@ -1,0 +1,14 @@
+{
+  "name": "Loan Calculator",
+  "name_hindi": "कृषि ऋण कैलकुलेटर",
+  "short_description": "Calculate EMI for agricultural loans including KCC, crop loans, and equipment financing with subsidy information.",
+  "pain_point": "Farmers don't understand loan terms and often pay more interest than necessary",
+  "opportunity": "Understanding loan options helps farmers access cheaper credit",
+  "target_users": "All farmers seeking agricultural credit",
+  "ai_features": ["EMI calculation", "Subsidy comparison", "Scheme information"],
+  "key_features": ["KCC, Crop, Equipment loans", "EMI calculation", "Subsidy rates", "Government schemes info"],
+  "id": "tool_013",
+  "status": "built",
+  "slug": "loan-calculator",
+  "files": ["index.html", "style.css", "script.js"]
+}
